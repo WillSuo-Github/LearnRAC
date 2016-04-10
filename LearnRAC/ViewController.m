@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CalculatorMaker.h"
 #import "ReactiveCocoa.h"
-
+#import "TwoViewController.h"
 
 @interface ViewController ()
 
@@ -23,22 +23,27 @@
     
     
     
-    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [subscriber sendNext:@"111"];
-        
-        return [RACDisposable disposableWithBlock:^{
-        
-        }];
-    }];
-    
-    [signal subscribeNext:^(id x) {
-        NSLog(@"----%@",x);
-    }];
-    
-    
 }
 
 
+- (IBAction)chick:(id)sender {
+    
+    
+    RACReplaySubject *subject = [RACReplaySubject subject];
+    
+    [subject sendNext:@"111"];
+    [subject subscribeNext:^(id x) {
+        NSLog(@"第一个订阅者%@",x);
+    }];
+    
+    [subject subscribeNext:^(id x) {
+        NSLog(@"第二个订阅者%@",x);
+    }];
+    
+    
+    
+//    [subject sendNext:@"222"];
+}
 
 
 - (void)didReceiveMemoryWarning {
