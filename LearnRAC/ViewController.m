@@ -13,6 +13,8 @@
 
 @interface ViewController ()
 
+//@property (nonatomic, strong) RACCommand *command;
+
 @end
 
 @implementation ViewController
@@ -20,23 +22,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
     
-//    NSArray *arr = @[@1,@2,@3];
-//    
-//    [arr.rac_sequence.signal subscribeNext:^(id x) {
-//        NSLog(@"%@",x[1]);
-//    }];
-    
-//    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"a",@"2",@"b",@"3",@"c", nil];
-//    [dict.rac_sequence.signal subscribeNext:^(id x) {
-////        NSLog(@"%@",x[1]);
-//        RACTupleUnpack(NSString *key,id value) = x;
-//        
-//        NSLog(@"%@,%@",key,value);
-//    }];
+    RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        NSLog(@"%@",input);
+        
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            
+            [subscriber sendNext:@"发出信号"];
+            return nil;
+        }];
+        
+    }];
     
     
+    [command.executionSignals subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+        [x subscribeNext:^(id x) {
+            NSLog(@"%@",x);
+        }];
+    }];
     
+    
+    [command execute:@"1"];
     
 }
 
@@ -58,6 +66,28 @@
     
     
 //    [subject sendNext:@"222"];
+    
+    
+    RACSubject *signalOfSignals = [RACSubject subject];
+    
+    RACSubject *signal = [RACSubject subject];
+    
+    
+    [signalOfSignals subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+        [x subscribeNext:^(id x) {
+            NSLog(@"---%@",x);
+        }];
+    }];
+    
+    
+    [signal subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [signalOfSignals sendNext:signal];
+    
+    [signal sendNext:@"signal"];
 }
 
 
