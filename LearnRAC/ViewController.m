@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "NSObject+makeCalculator.h"
+#import "CalculatorMaker.h"
+
 
 @interface ViewController ()
 
@@ -18,11 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSInteger result = [NSObject makeCalculator:^(CalculatorMaker *make) {
-        make.add(20).add(20);
-    }];
     
-    NSLog(@"%ld",result);
+    CalculatorMaker *maker = [[CalculatorMaker alloc] init];
+    
+    BOOL result = [[[maker add:^NSInteger(NSInteger num) {
+        num += 20;
+        num += 10;
+        return num;
+    }] isEqualToResult:^BOOL(NSInteger num) {
+        return num == 30;
+    }] isEqualToResult];
+    
+    NSLog(@"%d",result);
     
 }
 

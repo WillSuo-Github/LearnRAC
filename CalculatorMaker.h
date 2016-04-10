@@ -12,8 +12,10 @@
 
 @property (nonatomic, assign) NSInteger result;
 
+@property (nonatomic, assign) BOOL isEqualToResult;
 
-- (CalculatorMaker *(^)(NSInteger num))add;
 
-- (CalculatorMaker *)addNum:(NSInteger)num;
+- (instancetype)add:(NSInteger(^)(NSInteger num))block;
+
+- (instancetype)isEqualToResult:(BOOL(^)(NSInteger num))block;
 @end

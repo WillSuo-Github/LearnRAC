@@ -10,20 +10,17 @@
 
 @implementation CalculatorMaker
 
-- (CalculatorMaker *(^)(NSInteger))add{
+- (instancetype)add:(NSInteger(^)(NSInteger))block{
     
-    return ^(NSInteger num){
-        
-        _result += num;
-        
-        return self;
-    };
+    _result = block(_result);
+    
+    return self;
 }
 
-
-- (CalculatorMaker *)addNum:(NSInteger)num{
+- (instancetype)isEqualToResult:(BOOL (^)(NSInteger))block{
     
-    _result += num;
+    _isEqualToResult = block(_result);
+    
     return self;
 }
 

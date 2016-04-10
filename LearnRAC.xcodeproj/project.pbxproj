@@ -16,7 +16,6 @@
 		0497B2A61CBA074000A78872 /* LearnRACTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497B2A51CBA074000A78872 /* LearnRACTests.m */; };
 		0497B2B11CBA074000A78872 /* LearnRACUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497B2B01CBA074000A78872 /* LearnRACUITests.m */; };
 		0497B2C01CBA079700A78872 /* CalculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497B2BF1CBA079700A78872 /* CalculatorMaker.m */; };
-		0497B2C31CBA07B500A78872 /* NSObject+makeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497B2C21CBA07B500A78872 /* NSObject+makeCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +54,6 @@
 		0497B2B21CBA074000A78872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0497B2BE1CBA079700A78872 /* CalculatorMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorMaker.h; sourceTree = "<group>"; };
 		0497B2BF1CBA079700A78872 /* CalculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorMaker.m; sourceTree = "<group>"; };
-		0497B2C11CBA07B500A78872 /* NSObject+makeCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+makeCalculator.h"; sourceTree = "<group>"; };
-		0497B2C21CBA07B500A78872 /* NSObject+makeCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+makeCalculator.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +84,6 @@
 		0497B27F1CBA074000A78872 = {
 			isa = PBXGroup;
 			children = (
-				0497B2C11CBA07B500A78872 /* NSObject+makeCalculator.h */,
-				0497B2C21CBA07B500A78872 /* NSObject+makeCalculator.m */,
 				0497B2BE1CBA079700A78872 /* CalculatorMaker.h */,
 				0497B2BF1CBA079700A78872 /* CalculatorMaker.m */,
 				0497B28A1CBA074000A78872 /* LearnRAC */,
@@ -281,7 +276,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0497B2931CBA074000A78872 /* ViewController.m in Sources */,
-				0497B2C31CBA07B500A78872 /* NSObject+makeCalculator.m in Sources */,
 				0497B2901CBA074000A78872 /* AppDelegate.m in Sources */,
 				0497B2C01CBA079700A78872 /* CalculatorMaker.m in Sources */,
 				0497B28D1CBA074000A78872 /* main.m in Sources */,
@@ -510,6 +504,7 @@
 				0497B2B71CBA074000A78872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0497B2B81CBA074000A78872 /* Build configuration list for PBXNativeTarget "LearnRACTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +513,7 @@
 				0497B2BA1CBA074000A78872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0497B2BB1CBA074000A78872 /* Build configuration list for PBXNativeTarget "LearnRACUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +522,7 @@
 				0497B2BD1CBA074000A78872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
