@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CalculatorMaker.h"
+#import "ReactiveCocoa.h"
 
 
 @interface ViewController ()
@@ -20,17 +21,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    CalculatorMaker *maker = [[CalculatorMaker alloc] init];
     
-    BOOL result = [[[maker add:^NSInteger(NSInteger num) {
-        num += 20;
-        num += 10;
-        return num;
-    }] isEqualToResult:^BOOL(NSInteger num) {
-        return num == 30;
-    }] isEqualToResult];
     
-    NSLog(@"%d",result);
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"111"];
+        
+        return [RACDisposable disposableWithBlock:^{
+        
+        }];
+    }];
+    
+    [signal subscribeNext:^(id x) {
+        NSLog(@"----%@",x);
+    }];
+    
     
 }
 
