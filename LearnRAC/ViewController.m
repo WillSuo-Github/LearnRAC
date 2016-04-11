@@ -66,7 +66,7 @@
     
     
 //    [subject sendNext:@"222"];
-    
+    //https://wb_liyanke@svn.ihangmei.com:8443/svn/mobile/trunk/iOS
     
     RACSubject *signalOfSignals = [RACSubject subject];
     
