@@ -17,6 +17,7 @@
 		0497B2A61CBA074000A78872 /* LearnRACTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497B2A51CBA074000A78872 /* LearnRACTests.m */; };
 		0497B2B11CBA074000A78872 /* LearnRACUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497B2B01CBA074000A78872 /* LearnRACUITests.m */; };
 		0497B2C01CBA079700A78872 /* CalculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497B2BF1CBA079700A78872 /* CalculatorMaker.m */; };
+		541C67E91CBB4CCD0045BA6E /* redView.m in Sources */ = {isa = PBXBuildFile; fileRef = 541C67E81CBB4CCD0045BA6E /* redView.m */; };
 		ED2E2C369C65992607D495AC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4B7F6941C388B7209C6C7B /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		0497B2BE1CBA079700A78872 /* CalculatorMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorMaker.h; sourceTree = "<group>"; };
 		0497B2BF1CBA079700A78872 /* CalculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorMaker.m; sourceTree = "<group>"; };
 		056D5BAB38E1BACF49BC0B23 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		541C67E71CBB4CCD0045BA6E /* redView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = redView.h; sourceTree = "<group>"; };
+		541C67E81CBB4CCD0045BA6E /* redView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = redView.m; sourceTree = "<group>"; };
 		7504FE3895C071849CD52F0F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BB4B7F6941C388B7209C6C7B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +129,8 @@
 				0497B29C1CBA074000A78872 /* Info.plist */,
 				0484E16C1CBA7EE0003044FB /* TwoViewController.h */,
 				0484E16D1CBA7EE0003044FB /* TwoViewController.m */,
+				541C67E71CBB4CCD0045BA6E /* redView.h */,
+				541C67E81CBB4CCD0045BA6E /* redView.m */,
 				0497B28B1CBA074000A78872 /* Supporting Files */,
 			);
 			path = LearnRAC;
@@ -359,6 +364,7 @@
 				0497B2901CBA074000A78872 /* AppDelegate.m in Sources */,
 				0497B2C01CBA079700A78872 /* CalculatorMaker.m in Sources */,
 				0484E16E1CBA7EE0003044FB /* TwoViewController.m in Sources */,
+				541C67E91CBB4CCD0045BA6E /* redView.m in Sources */,
 				0497B28D1CBA074000A78872 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
