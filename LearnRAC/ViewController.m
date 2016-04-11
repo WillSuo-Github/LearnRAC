@@ -38,11 +38,18 @@
 //    
 //    [self rac_liftSelector:@selector(getHotData:recommendData:) withSignalsFromArray:@[hotSignal,recommendSignal]];
     
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 20, 100, 30)];
+    [self.view addSubview:label];
+    label.textColor = [UIColor greenColor];
+    label.backgroundColor = [UIColor redColor];
     
-//    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 100, 100, 44)];
-//    [self.view addSubview:textField];
-//    textField.borderStyle = UITextBorderStyleLine;
-//    
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
+    [self.view addSubview:textField];
+    textField.borderStyle = UITextBorderStyleLine;
+    
+    RAC(label,text) = textField.rac_textSignal;
+//
 //    [textField.rac_textSignal subscribeNext:^(id x) {
 //        NSLog(@"%@",x);
 //    }];
@@ -62,13 +69,13 @@
 //    }];
     
     
-    redView *red = [[redView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    [self.view addSubview:red];
-    
-    
-    [[red rac_signalForSelector:@selector(chick)] subscribeNext:^(id x) {
-        NSLog(@"主控制器监听到红色View的点击");
-    }];
+//    redView *red = [[redView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+//    [self.view addSubview:red];
+//    
+//    
+//    [[red rac_signalForSelector:@selector(chick)] subscribeNext:^(id x) {
+//        NSLog(@"主控制器监听到红色View的点击");
+//    }];
 }
 
 - (void)getHotData:(NSString *)hotData recommendData:(NSString *)recommendData{
@@ -82,42 +89,6 @@
 - (IBAction)chick:(id)sender {
     
     
-//    RACReplaySubject *subject = [RACReplaySubject subject];
-//    
-//    [subject sendNext:@"111"];
-//    [subject subscribeNext:^(id x) {
-//        NSLog(@"第一个订阅者%@",x);
-//    }];
-//    
-//    [subject subscribeNext:^(id x) {
-//        NSLog(@"第二个订阅者%@",x);
-//    }];
-    
-    
-    
-//    [subject sendNext:@"222"];
-    //https://wb_liyanke@svn.ihangmei.com:8443/svn/mobile/trunk/iOS
-    
-    RACSubject *signalOfSignals = [RACSubject subject];
-    
-    RACSubject *signal = [RACSubject subject];
-    
-    
-    [signalOfSignals subscribeNext:^(id x) {
-        NSLog(@"%@",x);
-        [x subscribeNext:^(id x) {
-            NSLog(@"---%@",x);
-        }];
-    }];
-    
-    
-    [signal subscribeNext:^(id x) {
-        NSLog(@"%@",x);
-    }];
-    
-    [signalOfSignals sendNext:signal];
-    
-    [signal sendNext:@"signal"];
 }
 
 
