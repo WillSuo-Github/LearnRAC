@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "CalculatorMaker.h"
-#import "ReactiveCocoa.h"
+#import "LoginViewController.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 
 @interface ViewController ()
@@ -22,23 +22,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    
-    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [subscriber sendNext:@"111"];
-        
-        return [RACDisposable disposableWithBlock:^{
-        
-        }];
-    }];
-    
-    [signal subscribeNext:^(id x) {
-        NSLog(@"----%@",x);
-    }];
-    
-    
 }
 
-
+#pragma mark -
+#pragma mark - action reponse
+- (IBAction)loginButtonDidTapped:(id)sender {
+    
+    LoginViewController *loginVc = [[LoginViewController alloc] init];
+    [self.navigationController pushViewController:loginVc animated:true];
+}
 
 
 - (void)didReceiveMemoryWarning {
