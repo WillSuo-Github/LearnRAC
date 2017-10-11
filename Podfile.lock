@@ -1,12 +1,15 @@
 PODS:
+  - MBProgressHUD+WJExtension (1.3.1)
   - ReactiveObjC (3.0.0)
 
 DEPENDENCIES:
+  - MBProgressHUD+WJExtension (~> 1.3.1)
   - ReactiveObjC (~> 3.0.0)
 
 SPEC CHECKSUMS:
+  MBProgressHUD+WJExtension: 1d9c93951b49e8c711fef6e6089aa6d7d3321192
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
 
-PODFILE CHECKSUM: e204607b870d8bece826d2db1b13177d5055a126
+PODFILE CHECKSUM: e12463fdc5c98d10068ce3193429b661ebfde316
 
 COCOAPODS: 1.3.1

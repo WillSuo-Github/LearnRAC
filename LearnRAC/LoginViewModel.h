@@ -15,4 +15,5 @@
 @property (nonatomic, copy) NSString *pwd;
 
 @property (nonatomic, strong) RACSignal *enableLoginSignal;
+@property (nonatomic, strong) RACCommand *loginCommand;
 @end
