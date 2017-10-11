@@ -6,4 +6,5 @@ target 'LearnRAC' do
   use_frameworks!
   pod 'ReactiveObjC', '~> 3.0.0'
   pod 'MBProgressHUD+WJExtension', '~> 1.3.1'
+  pod 'AFNetworking', '~> 3.1.0'
 end

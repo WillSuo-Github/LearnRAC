@@ -15,9 +15,7 @@
 		0497B29B1CBA074000A78872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0497B2991CBA074000A78872 /* LaunchScreen.storyboard */; };
 		0497B2A61CBA074000A78872 /* LearnRACTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497B2A51CBA074000A78872 /* LearnRACTests.m */; };
 		0497B2B11CBA074000A78872 /* LearnRACUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497B2B01CBA074000A78872 /* LearnRACUITests.m */; };
-		54A0AE2F1F8D2F710003C940 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A0AE2D1F8D2F710003C940 /* LoginViewController.m */; };
-		54A0AE301F8D2F710003C940 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A0AE2E1F8D2F710003C940 /* LoginViewController.xib */; };
-		54A0AE331F8D30000003C940 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A0AE321F8D30000003C940 /* LoginViewModel.m */; };
+		54A0AE361F8E08400003C940 /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A0AE351F8E08400003C940 /* RequestViewModel.m */; };
 		6147CB2D6494DD87C23811C8 /* Pods_LearnRAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D1972A459CAC995F881165 /* Pods_LearnRAC.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,11 +53,8 @@
 		0497B2AC1CBA074000A78872 /* LearnRACUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnRACUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0497B2B01CBA074000A78872 /* LearnRACUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnRACUITests.m; sourceTree = "<group>"; };
 		0497B2B21CBA074000A78872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54A0AE2C1F8D2F710003C940 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		54A0AE2D1F8D2F710003C940 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		54A0AE2E1F8D2F710003C940 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		54A0AE311F8D30000003C940 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
-		54A0AE321F8D30000003C940 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		54A0AE341F8E08400003C940 /* RequestViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewModel.h; sourceTree = "<group>"; };
+		54A0AE351F8E08400003C940 /* RequestViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestViewModel.m; sourceTree = "<group>"; };
 		73D1972A459CAC995F881165 /* Pods_LearnRAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnRAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757546A581871506DDC90F24 /* Pods-LearnRAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnRAC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnRAC/Pods-LearnRAC.debug.xcconfig"; sourceTree = "<group>"; };
 		BB4B7F6941C388B7209C6C7B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,11 +116,8 @@
 				0497B28F1CBA074000A78872 /* AppDelegate.m */,
 				0497B2911CBA074000A78872 /* ViewController.h */,
 				0497B2921CBA074000A78872 /* ViewController.m */,
-				54A0AE311F8D30000003C940 /* LoginViewModel.h */,
-				54A0AE321F8D30000003C940 /* LoginViewModel.m */,
-				54A0AE2C1F8D2F710003C940 /* LoginViewController.h */,
-				54A0AE2D1F8D2F710003C940 /* LoginViewController.m */,
-				54A0AE2E1F8D2F710003C940 /* LoginViewController.xib */,
+				54A0AE341F8E08400003C940 /* RequestViewModel.h */,
+				54A0AE351F8E08400003C940 /* RequestViewModel.m */,
 				0497B2941CBA074000A78872 /* Main.storyboard */,
 				0497B2971CBA074000A78872 /* Assets.xcassets */,
 				0497B2991CBA074000A78872 /* LaunchScreen.storyboard */,
@@ -285,7 +277,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54A0AE301F8D2F710003C940 /* LoginViewController.xib in Resources */,
 				0497B29B1CBA074000A78872 /* LaunchScreen.storyboard in Resources */,
 				0497B2981CBA074000A78872 /* Assets.xcassets in Resources */,
 				0497B2961CBA074000A78872 /* Main.storyboard in Resources */,
@@ -331,11 +322,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LearnRAC/Pods-LearnRAC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD+WJExtension/MBProgressHUD_WJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD_WJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
@@ -369,10 +362,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54A0AE2F1F8D2F710003C940 /* LoginViewController.m in Sources */,
 				0497B2931CBA074000A78872 /* ViewController.m in Sources */,
 				0497B2901CBA074000A78872 /* AppDelegate.m in Sources */,
-				54A0AE331F8D30000003C940 /* LoginViewModel.m in Sources */,
+				54A0AE361F8E08400003C940 /* RequestViewModel.m in Sources */,
 				0497B28D1CBA074000A78872 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

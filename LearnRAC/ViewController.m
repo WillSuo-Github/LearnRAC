@@ -7,35 +7,46 @@
 //
 
 #import "ViewController.h"
-#import "LoginViewController.h"
+#import "RequestViewModel.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 
 
 @interface ViewController ()
 
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) RequestViewModel *requestViewModel;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    _tableView.dataSource = self.requestViewModel;
+    [self.view addSubview:_tableView];
     
 }
 
 #pragma mark -
 #pragma mark - action reponse
-- (IBAction)loginButtonDidTapped:(id)sender {
-    
-    LoginViewController *loginVc = [[LoginViewController alloc] init];
-    [self.navigationController pushViewController:loginVc animated:true];
+- (IBAction)buttonDidTapped:(id)sender {
+    RACSignal *requestSignal = [self.requestViewModel.requestCommand execute:@"start"];
+    [requestSignal subscribeNext:^(NSArray *x) {
+        self.requestViewModel.models = x;
+        [self.tableView reloadData];
+    }];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark -
+#pragma mark - lazy
+- (RequestViewModel *)requestViewModel {
+    if (_requestViewModel == nil) {
+        _requestViewModel = [[RequestViewModel alloc] init];
+    }
+    return _requestViewModel;
 }
 
 @end
